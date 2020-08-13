@@ -26,7 +26,9 @@
 
 ## docker部署
 1. build
+```
 docker-compose build
+```
 
 2. 创建数据库
 ```
