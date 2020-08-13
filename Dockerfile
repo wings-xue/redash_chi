@@ -96,8 +96,10 @@ COPY . /app
 COPY --from=frontend-builder /frontend/client/dist /app/client/dist
 RUN ls /app/client/dist
 
-RUN chown -R redash /app
-USER redash
 
-ENTRYPOINT ["/app/bin/docker-entrypoint"]
+RUN chmod 777 -R  /app
+USER redash
+RUN ls -l  /app
+
+ENTRYPOINT ["sh", "/app/bin/docker-entrypoint"]
 CMD ["server"]

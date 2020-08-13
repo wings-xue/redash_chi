@@ -211,19 +211,19 @@ LDAP_HOST_URL = os.environ.get("REDASH_LDAP_URL", "ldap://192.168.200.6:389")
 LDAP_BIND_DN = os.environ.get("REDASH_LDAP_BIND_DN", "cn=using,dc=huoshi,dc=com")
 LDAP_BIND_DN_PASSWORD = os.environ.get("REDASH_LDAP_BIND_DN_PASSWORD", "enmmsyySnCVICidD")
 # AD/LDAP email and display name keys
-LDAP_DISPLAY_NAME_KEY = os.environ.get("REDASH_LDAP_DISPLAY_NAME_KEY", "displayName")
-LDAP_EMAIL_KEY = os.environ.get("REDASH_LDAP_EMAIL_KEY", "mail")
+LDAP_DISPLAY_NAME_KEY = os.environ.get("REDASH_LDAP_DISPLAY_NAME_KEY", "uid")
+LDAP_EMAIL_KEY = os.environ.get("REDASH_LDAP_EMAIL_KEY", "email")
 # Prompt that should be shown above username/email field.
 LDAP_CUSTOM_USERNAME_PROMPT = os.environ.get(
     "REDASH_LDAP_CUSTOM_USERNAME_PROMPT", "LDAP/AD/SSO username:"
 )
 # LDAP Search DN TEMPLATE (for AD this should be "(sAMAccountName=%(username)s)"")
 LDAP_SEARCH_TEMPLATE = os.environ.get(
-    "REDASH_LDAP_SEARCH_TEMPLATE", "(cn=%(username)s)"
+    "REDASH_LDAP_SEARCH_TEMPLATE", "(uid=%(username)s)"
 )
 # The schema to bind to (ex. cn=users,dc=ORG,dc=local)
 LDAP_SEARCH_DN = os.environ.get(
-    "REDASH_LDAP_SEARCH_DN", os.environ.get("REDASH_SEARCH_DN")
+    "REDASH_LDAP_SEARCH_DN", os.environ.get("REDASH_SEARCH_DN", "ou=People,dc=huoshi,dc=com")
 )
 
 STATIC_ASSETS_PATH = fix_assets_path(
