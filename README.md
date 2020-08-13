@@ -20,3 +20,15 @@ redash部署
         }
     ]
 }
+
+
+## 部署
+1. 创建数据库
+```
+docker-compose run --rm server create_db
+```
+2. 启动所有组件
+```
+docker-compose up -d
+```
+
