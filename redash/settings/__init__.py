@@ -208,8 +208,8 @@ LDAP_AUTH_METHOD = os.environ.get("REDASH_LDAP_AUTH_METHOD", "SIMPLE")
 LDAP_HOST_URL = os.environ.get("REDASH_LDAP_URL", "ldap://192.168.200.6:389")
 # The DN & password used to connect to LDAP to determine the identity of the user being authenticated.
 # For AD this should be "org\\user".
-LDAP_BIND_DN = os.environ.get("REDASH_LDAP_BIND_DN", "cn=using,dc=huoshi,dc=com")
-LDAP_BIND_DN_PASSWORD = os.environ.get("REDASH_LDAP_BIND_DN_PASSWORD", "enmmsyySnCVICidD")
+LDAP_BIND_DN = os.environ.get("REDASH_LDAP_BIND_DN", "cn=using,dc=xxxx,dc=com")
+LDAP_BIND_DN_PASSWORD = os.environ.get("REDASH_LDAP_BIND_DN_PASSWORD", "xxx")
 # AD/LDAP email and display name keys
 LDAP_DISPLAY_NAME_KEY = os.environ.get("REDASH_LDAP_DISPLAY_NAME_KEY", "uid")
 LDAP_EMAIL_KEY = os.environ.get("REDASH_LDAP_EMAIL_KEY", "email")
@@ -223,7 +223,7 @@ LDAP_SEARCH_TEMPLATE = os.environ.get(
 )
 # The schema to bind to (ex. cn=users,dc=ORG,dc=local)
 LDAP_SEARCH_DN = os.environ.get(
-    "REDASH_LDAP_SEARCH_DN", os.environ.get("REDASH_SEARCH_DN", "ou=People,dc=huoshi,dc=com")
+    "REDASH_LDAP_SEARCH_DN", os.environ.get("REDASH_SEARCH_DN", "ou=People,dc=xxxx,dc=com")
 )
 
 STATIC_ASSETS_PATH = fix_assets_path(
