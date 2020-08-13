@@ -1,0 +1,8 @@
+.search input[type="text"],
+.search button {
+  height: 35px;
+}
+
+.page-queries-list .page-header-actions {
+  min-width: 25%; /* same as sidebar */
+}

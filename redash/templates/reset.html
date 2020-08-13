@@ -1,0 +1,25 @@
+{% extends "layouts/signed_out.html" %}
+
+{% block title %}密码重置{% endblock %}
+
+{% block content %}
+<div class="fixed-width-page">
+  <div class="bg-white tiled">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-danger" role="alert">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <form role="form" method="post" name="invite">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+      <div class="form-group">
+        <label for="password">请输入新密码：</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block m-t-25">更换密码</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
