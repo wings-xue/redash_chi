@@ -9,4 +9,3 @@ Redash系统架构
   <img title="Redash" src='http://www.dazdata.com/wp-content/uploads/2020/06/tech.jpg' width="960px"/>
 </p>
 
-达之数据推出的Redash中文版，秉承开源精神，为广大企业提供优秀的免费开源软件，并提供专业的Redash技术支持和服务，研发本地化应用插件和基于Redash技术架构的Dazdata数据分析与预测平台。
