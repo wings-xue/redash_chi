@@ -41,7 +41,7 @@ services:
       WORKERS_COUNT: 2
       QUEUES: "queries,scheduled_queries,celery"
 
-  scheduler:
+  worker:
     build: .
     command: worker
     environment:
